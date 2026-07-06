@@ -165,8 +165,8 @@ void runSection1() {
 
   Map<String, List<double>> expensesBy3Months = {};
 
-  for (int monthIndex = 1; monthIndex <= 3; monthIndex++) {
-    String monthName = readString("\nEnter month name #$monthIndex: ");
+  for (int monthIndex = 0; monthIndex <= 2; monthIndex++) {
+    String monthName = getMonthName(currentMonth - monthIndex > 0 ? currentMonth - monthIndex : currentMonth - monthIndex + 12 );
     int expenseCount =
     readInt("How many expenses for $monthName? ");
 
